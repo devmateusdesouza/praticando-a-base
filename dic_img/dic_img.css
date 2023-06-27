@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#geral{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    border: 2px solid black;
+}
+
+figure{
+    width: 600px;
+    height: 600px;
+}
+
+img{
+    width: 600px;
+    height: 600px;
+}
+
+#form{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+#form p {
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: sans-serif;
+}
+
+#input-text{
+    width: 200px;
+
+}
+
+#submit{
+    width: 50px;
+    
+}
+
+#text_confirmation{
+    font-size: 20px;
+}

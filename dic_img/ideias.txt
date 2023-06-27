@@ -1,0 +1,5 @@
+1. criar um vetor bidimensional com [número,nome da imagem]
+ex:
+var imagens [1,officer][2, Doctor]
+
+2. Chamar outro html com outra foto
