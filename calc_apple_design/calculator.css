@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 207px;
+    height: 448px;
+    background-color: rgb(32, 32, 32);
+}
+
+.display{
+    width: 100%;
+    height: 150px;
+    color: white;
+    text-align:right;
+    
+}
+
+button{
+    width: 46px;
+    height: 46px;
+    border-radius: 100%;
+    border: none;
+    margin: 1px;
+    margin-top: 2px;
+
+}
+
+.button-number{
+    background-color: rgb(66, 66, 66);
+    color: white;
+}
+
+.button-operator{
+    background-color: orange;
+    color: white;
+}
+
+.button-functional{
+    background-color: rgb(180, 180, 180);
+}
+
+.zero{
+    width: 96px;
+    border-radius: 30%;
+    text-align: left;
+    padding-left: 20px;
+}

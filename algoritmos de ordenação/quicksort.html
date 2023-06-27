@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Quicksort</title>
+  </head>
+  <body>
+    <h1>Quicksort</h1>
+    <p id="array"></p>
+    <script>
+      // Gera um array com números de 20 à 0
+      const array = [];
+      for (let i = 20; i >= 0; i--) {
+        array.push(i);
+      }
+      
+      // Exibe o array original na página
+      document.getElementById("array").innerHTML = "Array original: " + array.join(", ");
+      
+      // Implementação do Quicksort
+      function quicksort(array, esquerda, direita) {
+        if (esquerda < direita) {
+          let pivo = particiona(array, esquerda, direita);
+          
+          // Exibe o array após a partição na página
+          document.getElementById("array").innerHTML += "<br>Array após a partição: " + array.join(", ");
+          
+          quicksort(array, esquerda, pivo - 1);
+          quicksort(array, pivo + 1, direita);
+        }
+      }
+      
+      function particiona(array, esquerda, direita) {
+        let pivo = array[direita];
+        let i = esquerda - 1;
+        
+        for (let j = esquerda; j <= direita - 1; j++) {
+          if (array[j] < pivo) {
+            i++;
+            let temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+          }
+        }
+        
+        let temp = array[i + 1];
+        array[i + 1] = array[direita];
+        array[direita] = temp;
+        
+        return i + 1;
+      }
+      
+      quicksort(array, 0, array.length - 1);
+      
+      // Exibe o array final na página
+      document.getElementById("array").innerHTML += "<br>Array final: " + array.join(", ");
+    </script>
+  </body>
+</html>

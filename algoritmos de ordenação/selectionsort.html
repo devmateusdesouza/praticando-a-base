@@ -1,0 +1,42 @@
+z<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Selection Sort</title>
+  </head>
+  <body>
+    <h1>Selection Sort</h1>
+    <p id="array"></p>
+    <script>
+      // Gera um array com números de 20 à 0
+      const array = [];
+      for (let i = 20; i >= 0; i--) {
+        array.push(i);
+      }
+      
+      // Exibe o array original na página
+      document.getElementById("array").innerHTML = "Array original: " + array.join(", ");
+      
+      // Implementação do Selection Sort
+      for (let i = 0; i < array.length - 1; i++) {
+        let minIndex = i;
+        for (let j = i + 1; j < array.length; j++) {
+          if (array[j] < array[minIndex]) {
+            minIndex = j;
+          }
+        }
+        if (minIndex != i) {
+          let temp = array[i];
+          array[i] = array[minIndex];
+          array[minIndex] = temp;
+          
+          // Exibe o array após cada alteração na página
+          document.getElementById("array").innerHTML += "<br>Array após iteração " + (i + 1) + ": " + array.join(", ");
+        }
+      }
+      
+      // Exibe o array final na página
+      document.getElementById("array").innerHTML += "<br>Array final: " + array.join(", ");
+    </script>
+  </body>
+</html>

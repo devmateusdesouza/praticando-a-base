@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div id="para1">
+        Algum texto de exemplo
+    </div>
+    <div id="app">
+        <p>Troque a cor do texto</p>
+        <button onclick="trocardecor('blue')">Azul</button>
+        <button onclick="trocardecor('red')"> Vermelho</button>
+        <button onclick="trocardecor('white')"> Branco</button>
+        <button onclick="trocardecor('black')"> Preto</button>
+        <p>Troque a cor do fundo</p>
+        <button onclick="trocarfundo('blue')">Azul</button>
+        <button onclick="trocarfundo('red')"> Vermelho</button>
+        <button onclick="trocarfundo('black')"> Preto</button>
+        <p>Escreva o novo texto</p>
+        <input type="text" id="input-text">
+        <input type="submit" value="Trocar o Texto" onclick="trocartexto()">
+        <p>Trocar peso da fonte</p>
+        <button onclick="trocar_pesofonte('bold')">Negrito</button>
+        <button onclick="trocar_pesofonte('normal')"> Normal</button>
+        <p>Trocar tamanho da fonte</p>
+        <button onclick="trocar_tamanhofonte('40px')">Ultra Grande</button>
+        <button onclick="trocar_tamanhofonte('larger')">Grande</button>
+        <button onclick="trocar_tamanhofonte('medium')"> Médio</button>
+        <button onclick="trocar_tamanhofonte('small')"> Pequeno</button>
+    </div>
+
+    <script src="documents.js"></script>
+
+</body>
+</html>

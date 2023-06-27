@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Insertion Sort</title>
+  </head>
+  <body>
+    <h1>Insertion Sort</h1>
+    <p id="array"></p>
+    <script>
+      // Gera um array com números de 20 à 0
+      const array = [];
+      for (let i = 20; i >= 0; i--) {
+        array.push(i);
+      }
+      
+      // Exibe o array original na página
+      document.getElementById("array").innerHTML = "Array original: " + array.join(", ");
+      
+      // Implementação do Insertion Sort
+      for (let i = 1; i < array.length; i++) {
+        let current = array[i];
+        let j = i - 1;
+        while (j >= 0 && array[j] > current) {
+          array[j + 1] = array[j];
+          j--;
+        }
+        array[j + 1] = current;
+        
+        // Exibe o array após cada alteração na página
+        document.getElementById("array").innerHTML += "<br>Array após iteração " + i + ": " + array.join(", ");
+      }
+      
+      // Exibe o array final na página
+      document.getElementById("array").innerHTML += "<br>Array final: " + array.join(", ");
+    </script>
+  </body>
+</html>

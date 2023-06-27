@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Mergesort</title>
+  </head>
+  <body>
+    <h1>Mergesort</h1>
+    <p id="array"></p>
+    <script>
+      // Gera um array com números de 20 à 0
+      const array = [];
+      for (let i = 20; i >= 0; i--) {
+        array.push(i);
+      }
+      
+      // Exibe o array original na página
+      document.getElementById("array").innerHTML = "Array original: " + array.join(", ");
+      
+      // Implementação do Mergesort
+      function mergesort(array) {
+        if (array.length <= 1) {
+          return array;
+        }
+        
+        let meio = Math.floor(array.length / 2);
+        let esquerda = array.slice(0, meio);
+        let direita = array.slice(meio);
+        
+        esquerda = mergesort(esquerda);
+        direita = mergesort(direita);
+        
+        return merge(esquerda, direita);
+      }
+      
+      function merge(esquerda, direita) {
+        let resultado = [];
+        
+        while (esquerda.length && direita.length) {
+          if (esquerda[0] < direita[0]) {
+            resultado.push(esquerda.shift());
+          } else {
+            resultado.push(direita.shift());
+          }
+        }
+        
+        return resultado.concat(esquerda.slice()).concat(direita.slice());
+      }
+      
+      arrayOrdenado = mergesort(array);
+      
+      // Exibe o array final na página
+      document.getElementById("array").innerHTML += "<br>Array final: " + arrayOrdenado.join(", ");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Bubble Sort</title>
+  </head>
+  <body>
+    <h1>Bubble Sort</h1>
+    <p id="array"></p>
+    <script>
+      // Gera um array com números de 20 à 0
+      const array = [];
+      for (let i = 20; i >= 0; i--) {
+        array.push(i);
+      }
+      
+      // Exibe o array original na página
+      document.getElementById("array").innerHTML = "Array original: " + array.join(", ");
+      
+      // Implementação do Bubble Sort
+      for (let i = 0; i < array.length - 1; i++) {
+        for (let j = 0; j < array.length - i - 1; j++) {
+          if (array[j] > array[j + 1]) {
+            let temp = array[j];
+            array[j] = array[j + 1];
+            array[j + 1] = temp;
+            
+            // Exibe o array após cada alteração na página
+            document.getElementById("array").innerHTML += "<br>" + (i * array.length + j + 1) + ": " + array.join(", ");
+          }
+        }
+      }
+      
+      // Exibe o array final na página
+      document.getElementById("array").innerHTML += "<br>Array final: " + array.join(", ");
+    </script>
+  </body>
+</html>
