@@ -1,4 +1,6 @@
-Esse projeto eu fiz quando estava aprendendo as bases do Javascript. E resolvi praticar fazendo um pequeno sistema para praticar inglês. Pretendo fazer uma versão 2.0 corrigindo erros que cometi, adcionando backend e melhorando o design.
+Esse projeto eu fiz quando estava aprendendo as bases do Javascript. 
+Resolvi praticar fazendo um pequeno sistema para praticar inglês. 
+Pretendo fazer uma versão 2.0 corrigindo erros que cometi, adcionando backend e melhorando o design.
 
 Principais mudanças para a versão 2.0:
 
