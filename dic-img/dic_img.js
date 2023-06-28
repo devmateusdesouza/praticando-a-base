@@ -4,7 +4,7 @@ function verificar(){
     var txtimg = document.getElementById('img').src
     console.log(txtimg)
     var txtimgs = txtimg.slice(60,-4) //no servidor podem ser outros números, depende do tamanho do caminho
-        //no computador é (70,-4) no github é (65, -4)
+        //no computador é (70,-4) no github é (60, -4)
     console.log(txtimgs)
     var palavra = document.getElementById('input-text').value
 
