@@ -3,7 +3,8 @@ var i=1
 function verificar(){
     var txtimg = document.getElementById('img').src
     console.log(txtimg)
-    var txtimgs = txtimg.slice(70,-4) //no servidor podem ser outros números, depende do tamanho do caminho
+    var txtimgs = txtimg.slice(66,-4) //no servidor podem ser outros números, depende do tamanho do caminho
+        //no computador é (70,-4) no github é (66, -4)
     console.log(txtimgs)
     var palavra = document.getElementById('input-text').value
 
